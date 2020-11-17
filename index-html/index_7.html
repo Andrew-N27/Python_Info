@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнє завдання</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body style="font-size: 16px; padding-top: 30px; text-align: justify;">
+    <div class="container-fluid">
+        <div class="container">
+            <p>Можна також сказати, що віджети - це екстраверти. Вони не мають звички приховувати свої емоції і люблять
+                дуже сильно
+                впливати на інші віджети (наприклад, переміщення фокуса завжди залучає два віджети: той, що втрачає
+                фокус, і той, що
+                його отримує). Це означає, що програміст зобов’язаний не тільки керувати кожним із віджетів окремо, але
+                й їх парою,
+                трійкою тощо. Спробуємо уявити це.
+            </p>
+            <div>Подивіться псевдо-код нижче:
+            </div>
+            <ul style="font-weight: 700; list-style: none;">
+                <li>Поки_умова_істинна:
+                </li>
+                <li style="padding-left: 20px;">чекати_на_дію_користувача()
+                </li>
+                <li style="padding-left: 20px;">якщо натиснув_кнопку_так():
+                </li>
+                <li style="padding-left: 40px;">щось_зробити()
+                </li>
+                <li style="padding-left: 20px;">інакше_якщо натиснув_кнопку_ні():
+                </li>
+                <li style="padding-left: 40px;">щось_інше_зробити()
+                </li>
+            </ul>
+            <p>Примітка. Псевдо-код позбавлений усіх деталей і не є повним. Він охоплює менше, ніж приблизно 10% усіх
+                можливих подій, і
+                його треба сильно розвивати, щоб поводитись розумно.
+            </p>
+            <p>Візуальне програмування вимагає зовсім іншої філософії, або (висловлюючи цю думку модним чином), потрібна
+                інша
+                парадигма. Ця парадигма існує і широко застосовується для створення програм GUI. Це називається
+                програмою на основі
+                подій.
+            </p>
+            <div class="text-center">Парадигма на основі подій
+            </div>
+            <p>Що таке EDP? Event-driven paradigm. А точніше, чим відрізняється парадигма керованих подій ПКП від інших?
+                Перш за все,
+                виявлення, реєстрація та класифікація всіх дій користувача є поза контролем програміста - є
+                спеціалізований компонент,
+                який називається контролером подій, який бере на себе цю справу. Це автоматично і повністю непомітно.
+                Вам не потрібно
+                нічого робити (або майже нічого), щоб змусити машину працювати, але ви зобов'язані зробити щось інше.
+            </p>
+            <p>Ви маєте повідомити контролеру подій, що ви хочете виконати під час певної події (наприклад, натисканням
+                миші). Це
+                робиться шляхом написання спеціалізованих функцій, що називаються обробниками подій. Ви записуєте ці
+                обробники лише для
+                подій, які ви хочете обслуговувати - усі інші події активують поведінку за замовчуванням (наприклад,
+                переміщення фокусу
+                та закривання вікон).
+            </p>
+            <p>Звичайно, просто реалізувати обробник подій недостатньо - ви також маєте повідомити про це контролера
+                подій.
+                Уявімо собі, що у нас є функція під назвою <span style="font-weight: 700;">DoSomething()</span>, яка ...
+                щось робить. Ми хочемо, щоб функція
+                була викликана,
+                коли користувач натискає кнопку під назвою <span style="font-weight: 700;">DO IT !</span>.
+            </p>
+            <p>У класичній парадигмі нам слід було б:</p>
+            <ul>
+                <li>виявити клацання і перевірити, чи сталося це над нашою кнопкою;</li>
+            </ul>
+            <ul
+                style="list-style: none; display: flex; justify-content: center; margin: 40px 0 0; padding: 0; align-items: center;">
+                <li style="padding: 0 10px;"><a style="text-decoration: none;" href="index_6.html"><img
+                            style="width: 25px; transform: rotate(180deg);" src="images/tu_arror.png" alt=""></a></li>
+                <li style="padding: 4px 10px 0;"><a class="text-info" style="text-decoration: none;" href="../index.html">1</a></li>
+                <li style="padding: 4px 10px 0;"><a class="text-info" style="text-decoration: none;" href="index_2.html">2</a></li>
+                <li style="padding: 4px 10px 0;"><a class="text-info" style="text-decoration: none;" href="index_3.html">3</a></li>
+                <li style="padding: 4px 10px 0;"><a class="text-info" style="text-decoration: none;" href="index_4.html">4</a></li>
+                <li style="padding: 4px 10px 0;"><a class="text-info" style="text-decoration: none;" href="index_5.html">5</a></li>
+                <li style="padding: 4px 10px 0;"><a class="text-info" style="text-decoration: none;" href="index_6.html">6</a></li>
+                <li style="padding: 4px 10px 0;"><a class="text-info"
+                        style="text-decoration: none; border-bottom: 2px solid lightblue;" href="index_7.html">7</a></li>
+                <li style="padding: 4px 10px 0;"><a class="text-info" style="text-decoration: none;" href="index_8.html">8</a></li>
+                <li style="padding: 4px 10px 0;"><a class="text-info" style="text-decoration: none;" href="index_9.html">9</a></li>
+                <li style="padding: 0 10px;"><a style="text-decoration: none;" href="index_8.html"><img style="width: 25px;"
+                            src="images/tu_arror.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
